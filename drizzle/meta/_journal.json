@@ -1,19 +1,12 @@
 {
-  "version": "5",
-  "dialect": "pg",
+  "version": "7",
+  "dialect": "postgresql",
   "entries": [
     {
       "idx": 0,
-      "version": "5",
-      "when": 1720222780162,
-      "tag": "0000_square_thunderbolts",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1720236374087,
-      "tag": "0001_melodic_nitro",
+      "version": "7",
+      "when": 1720237039822,
+      "tag": "0000_unusual_stellaris",
       "breakpoints": true
     }
   ]
