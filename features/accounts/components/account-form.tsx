@@ -37,7 +37,6 @@ export const AccountForm = ({ id, defaultValues, onDelete, onSubmit, disabled }:
     
     const handleDelete = () => onDelete?.()
     
-
     return(
         <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-4 pt-4'>
