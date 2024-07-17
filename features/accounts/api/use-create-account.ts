@@ -16,6 +16,7 @@ export const useCreateAccount = () => {
         },
         onSuccess: () => {
             toast.success("Account created!")
+            // invalidate get accounts endpoint and refetch accounts after account is created
             queryClient.invalidateQueries({ queryKey: ["accounts"]})
         },
         onError: () => {
