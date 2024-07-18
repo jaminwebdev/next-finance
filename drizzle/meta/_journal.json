@@ -8,6 +8,13 @@
       "when": 1720237039822,
       "tag": "0000_unusual_stellaris",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1721309709179,
+      "tag": "0001_clear_the_initiative",
+      "breakpoints": true
     }
   ]
 }
