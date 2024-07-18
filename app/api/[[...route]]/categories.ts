@@ -27,8 +27,7 @@ const app = new Hono()
                 
             return c.json({ data })
     })
-    .get(
-        '/:id',
+    .get('/:id',
         zValidator("param", z.object({
             id: z.string().optional()
         })),
@@ -114,8 +113,7 @@ const app = new Hono()
             return c.json({ data })
         }
     )
-    .patch(
-        '/:id', 
+    .patch('/:id', 
         clerkMiddleware(),
         zValidator(
             "param",
@@ -152,8 +150,7 @@ const app = new Hono()
             return c.json({ data })
         }
     )
-    .delete(
-        '/:id', 
+    .delete('/:id', 
         clerkMiddleware(),
         zValidator(
             "param",
