@@ -15,6 +15,20 @@
       "when": 1721309709179,
       "tag": "0001_clear_the_initiative",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721321073087,
+      "tag": "0002_tricky_lady_vermin",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1721321152690,
+      "tag": "0003_colossal_warstar",
+      "breakpoints": true
     }
   ]
 }
