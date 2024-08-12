@@ -6,7 +6,7 @@ import { convertAmountToMiliUnits } from "@/lib/utils";
 import { format, parse } from "date-fns";
 
 const dateFormat = "yyyy-MM-dd HH:mm:ss";
-const outputFOrmat = "yyyy-MM-dd";
+const outputFormat = "yyyy-MM-dd";
 
 const requiredOptions = [
     "amount",
@@ -90,7 +90,7 @@ export const ImportCard = ({
         const formattedData = arrayOfData.map((item) => ({
             ...item,
             amount: convertAmountToMiliUnits(parseFloat(item.amount)),
-            date: format(parse(item.date, dateFormat, new Date()), outputFOrmat)
+            date: format(parse(item.date, dateFormat, new Date()), outputFormat)
         }))
 
         onSubmit(formattedData);
