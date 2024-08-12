@@ -30,13 +30,9 @@ export const useSelectAccount = (): [() => JSX.Element, () => Promise<unknown>] 
 
         const selectValue = useRef<string>();
 
-        const confirm = () => new Promise((resolve, reject) => {
-            setPromise({ resolve })
-        })
+        const confirm = () => new Promise((resolve, reject) => setPromise({ resolve }))
 
-        const handleClose = () => {
-            setPromise(null)
-        }
+        const handleClose = () => setPromise(null)
 
         const handleConfirm = () => {
             promise?.resolve(selectValue.current)
