@@ -28,17 +28,17 @@ export const useGetSummary = () => {
             const { data } = await response.json()
             return {
                 ...data,
-                incomeAmount: convertAmountFromMiliunits(data.incomeAmount),
-                expensesAmount: convertAmountFromMiliunits(data.expensesAmount),
-                remainingAmount: convertAmountFromMiliunits(data.remainingAmount),
+                incomeAmount: data.incomeAmount,
+                expensesAmount: data.expensesAmount,
+                remainingAmount: data.remainingAmount,
                 categories: data.categories.map((category) => ({
                     ...category,
-                    value: convertAmountFromMiliunits(category.value)
+                    value: category.value
                 })),
                 days: data.days.map((day) => ({
                     ...day,
-                    income: convertAmountFromMiliunits(day.income),
-                    expenses: convertAmountFromMiliunits(day.expenses)
+                    income: day.income,
+                    expenses: day.expenses
                 }))
             };
         }
