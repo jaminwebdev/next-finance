@@ -16,9 +16,8 @@ export const useBulkDeleteAccounts = () => {
         },
         onSuccess: () => {
             toast.success("Accounts deleted!")
-            // invalidate get accounts endpoint and refetch accounts after account is created
             queryClient.invalidateQueries({ queryKey: ["accounts"]})
-            // TODO: alslo invalidate summary
+            queryClient.invalidateQueries({ queryKey: ["summary"]})
         },
         onError: () => {
             toast.error("Failed to delete accounts")
