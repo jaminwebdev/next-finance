@@ -1,7 +1,8 @@
 "use client"
 
 import { useGetSummary } from "@/features/summary/api/use-get-summary"
-import { Chart } from "@/components/chart";
+import { Chart, ChartLoading } from "@/components/chart";
+import { SpendingPie, SpendingPieLoading } from "./spending-pie";
 
 
 export const DataCharts = () => {
@@ -10,9 +11,14 @@ export const DataCharts = () => {
 
     if (isLoading) {
         return (
-            <div>
-                Loading...
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
+          <div className="col-span-1 lg:col-span-3 xl:col-span-4">
+            <ChartLoading />
+          </div>
+          <div className="col-span-1 lg:col-span-3 xl:col-span-2">
+            <SpendingPieLoading />
+          </div>
+      </div>
         )
     }
 
@@ -22,6 +28,9 @@ export const DataCharts = () => {
                 <Chart 
                     data={data?.days}
                 />
+            </div>
+            <div className="col-span-1 lg:col-span-3 xl:col-span-2">
+                <SpendingPie data={data?.categories} />
             </div>
         </div>
     )
