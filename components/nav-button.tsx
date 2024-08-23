@@ -1,31 +1,24 @@
-import Link from "next/link"
-import { Button } from "./ui/button"
-import { cn } from "@/lib/utils"
-
+import Link from 'next/link';
+import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 
 type Props = {
-    href: string,
-    label: string,
-    isActive?: boolean
-}
+	href: string;
+	label: string;
+	isActive?: boolean;
+};
 
-export const NavButton = ({
-    href,
-    label,
-    isActive
-} : Props) => {
-    return (
-        <Button
-            asChild
-            size="sm"
-            variant="outline"
-            className={cn(
-                "w-full lg:w-auto justify-between font-normal hover:bg-white/20 hover:text-sky-800 border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-sky-800 focus:bg-white/30 transition",
-                isActive ? "bg-white/10 text-sky-800" : "bg-transparent"
-            )}>
-            <Link href={href}>
-                {label}
-            </Link>
-        </Button>
-    )
-}
+export const NavButton = ({ href, label, isActive }: Props) => {
+	return (
+		<Button
+			asChild
+			size="sm"
+			variant="outline"
+			className={cn(
+				'w-full lg:w-auto justify-between font-normal hover:bg-white/20 hover:text-sky-800 border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-sky-800 focus:bg-white/30 transition',
+				isActive ? 'bg-white/10 text-sky-800' : 'bg-transparent'
+			)}>
+			<Link href={href}>{label}</Link>
+		</Button>
+	);
+};
