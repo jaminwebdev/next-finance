@@ -6,13 +6,11 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
-export const convertAmountToMiliUnits = (amount: number) => {
-	return Math.round(amount * 1000);
-};
+export const convertAmountToMiliUnits = (amount: number) =>
+	Math.round(amount * 1000);
 
-export const convertAmountFromMiliunits = (amount: number) => {
-	return Math.round(amount / 1000);
-};
+export const convertAmountFromMiliunits = (amount: number) =>
+	Math.round(amount / 1000);
 
 export const formatCurrency = (value: number) => {
 	const finalValue = convertAmountFromMiliunits(value);
@@ -27,10 +25,7 @@ export const calculatePercentageChange = (
 	current: number,
 	previous: number
 ) => {
-	if (previous === 0) {
-		return previous === current ? 0 : 100;
-	}
-
+	if (previous === 0) return current === 0 ? 0 : 100;
 	return ((current - previous) / previous) * 100;
 };
 
