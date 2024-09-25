@@ -2,9 +2,7 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { eachDayOfInterval, format, isSameDay, subDays } from 'date-fns';
 
-export function cn(...inputs: ClassValue[]) {
-	return twMerge(clsx(inputs));
-}
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 export const convertAmountToMiliUnits = (amount: number) =>
 	Math.round(amount * 1000);
